@@ -1,24 +1,22 @@
-import logo from './logo.svg';
+import { Routes, Route, Link } from 'react-router-dom';
+import MainLayout from './view/main-layout/main-layout.comp';
+import Authentication from './view/authentication/authentication.comp';
 import './App.css';
+import LayoutSider from './view/layout-sider/layout-sider.comp';
+import Home from './view/item-home/item-home.comp';
+import Accounting from './view/item-accounting/item-accounting.comp';
+import Analysis from './view/item-analysis/item-analysis.comp';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route path='/' element={<MainLayout />} >
+        <Route path='/home' element={<Home />} />
+        <Route path='/accounting' element={<Accounting />} />
+        <Route path='/analysis' element={<Analysis />} />
+      </Route>
+      <Route path='/login' element={<Authentication />} />
+    </Routes>
   );
 }
 

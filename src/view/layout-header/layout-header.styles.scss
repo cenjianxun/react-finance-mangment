@@ -1,0 +1,24 @@
+.header-container {
+    background: #fff;
+    padding: 0;
+    height: 64px;
+
+    .user-container {
+        margin: 0 10px;
+        float:right;
+        align-items: center;
+
+        .user-text {
+            color: #999;
+            margin-right: 0;
+        }
+
+        .user-image {
+            margin-left: 10;
+        }
+    }
+}
+
+.header { 
+    background: #fff;
+}
